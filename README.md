@@ -1,6 +1,6 @@
 #### zigbbo_project
 
-![ERD](./projectImage/zigbbo_erd.png)
+
 ![메인](./projectImage/메인.png)
 ![추천상품](./projectImage/추천상품.png)
 ![최신요청](./projectImage/추천상품.png)
