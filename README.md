@@ -3,7 +3,7 @@
 ![ERD](./projectImage/zigbbo_erd.png)
 ![메인](./projectImage/메인.png)
 ![추천상품](./projectImage/추천상품.png)
-![최신요청](./projectImage/추천상품.png)
+![최신요청](./projectImage/최신요청.png)
 ![로그인](./projectImage/로그인.png)
 ![회원가입](./projectImage/회원가입.png)
 ![요청목록](./projectImage/요청목록.png)
