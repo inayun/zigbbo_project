@@ -14,15 +14,9 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.google.gson.Gson;
-
-import zigbo.model.ItemDAO;
-import zigbo.model.ZigboService;
-import zigbo.model.dto.ItemDTO;
-import zigbo.model.dto.MemberDTO;
-import zigbo.model.dto.PaymentDTO;
-import zigbo.model.dto.RequestPaymentDTO;
-import zigbo.model.dto.SellingDTO;
-import zigbo.model.dto.SellingMemberDTO;
+import zigbo.service.*;
+import zigbo.model.dao.ItemDAO;
+import zigbo.model.dto.*;
 
 public class SellingController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -102,7 +96,7 @@ public class SellingController extends HttpServlet {
 		if (title == null || title.length() == 0 || detail == null || detail.length() == 0
 				|| price == null || price.length() == 0 || location == null || location.length() == 0
 				|| picture == null || picture.length() == 0) {
-			session.setAttribute("errInfo", "¸ðµç Á¤º¸¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			session.setAttribute("errInfo", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 			response.sendRedirect(url);
 			return;
 		}
@@ -127,10 +121,10 @@ public class SellingController extends HttpServlet {
 		try{
 			boolean result = ZigboService.addSelling(selling);
 			if(result){
-				session.setAttribute("sucSales", "ÆÇ¸Å µî·Ï ¿Ï·á");
+				session.setAttribute("sucSales", "ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½");
 				url = "./sales/sales_list.jsp";
 			}else{
-				session.setAttribute("errRetry", "´Ù½Ã ½ÃµµÇÏ¼¼¿ä");
+				session.setAttribute("errRetry", "ï¿½Ù½ï¿½ ï¿½Ãµï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 			}
 		}catch(Exception s){
 			session.setAttribute("errorMsg", s.getMessage());
@@ -268,12 +262,12 @@ public class SellingController extends HttpServlet {
 			boolean result = ZigboService.addPayment(payment);
 			if(result){
 				if(ZigboService.updateSellingProgress(sellingCode)){
-					session.setAttribute("sucPurchase", "°áÁ¦ ¿Ï·á");
+					session.setAttribute("sucPurchase", "ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½");
 					response.sendRedirect("/zigbo/sales/sales_list.jsp");
 					return;
 				}
 			}else{
-				session.setAttribute("errRetry", "´Ù½Ã ½ÃµµÇÏ¼¼¿ä");
+				session.setAttribute("errRetry", "ï¿½Ù½ï¿½ ï¿½Ãµï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 			}
 		}catch(Exception s){
 			session.setAttribute("errorMsg", s.getMessage());

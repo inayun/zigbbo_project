@@ -1,4 +1,4 @@
-package zigbo.model;
+package zigbo.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,10 +18,10 @@ public class InterestDAO {
        *       - Delete
        * 
        * 
-      addInterest // Âò Ãß°¡?? 
-      getInterest1 // Æ¯Á¤ ÆÇ¸ÅÀÚ Âò °Ë»ö
-      getInterest2 // ¹°Ç° Âò Ä«¿îÆ® 
-       deleteInterest // Âò »èÁ¦
+      addInterest // ï¿½ï¿½ ï¿½ß°ï¿½?? 
+      getInterest1 // Æ¯ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë»ï¿½
+      getInterest2 // ï¿½ï¿½Ç° ï¿½ï¿½ Ä«ï¿½ï¿½Æ® 
+       deleteInterest // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
        */
 
 	static ResourceBundle sql = DBUtil.getResourceBundle();

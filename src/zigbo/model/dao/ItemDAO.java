@@ -1,4 +1,4 @@
-package zigbo.model;
+package zigbo.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,14 +18,14 @@ public class ItemDAO {
 	    *       - Update
 	    *       - Delete
 	    * 
-	   addItem //╬фюлеш цъ╟║ ?? ╠в╦╡ю╨ ╬Н╤╩╟т граЖ ╦П╦ё╟зю╫.
-	   getItem1 //╬фюлеш ╟к╩Ж (дз╣Е) ?? ╟М╧н
-	   getItem2 //╬фюлеш ╟к╩Ж (ю╖д║) 
-	   getItem3 //╬фюлеш ╟к╩Ж (╟║╟щ)
-	   getAllItem //╦П╣Г ╬фюлеш ╟к╩Ж
-	   updateItemPrice // ╬фюлеш ╟║╟щ ╪Жа╓ ?? sql ╟М╧н
-	   updateItemLocation // ╬фюлеш ю╖д║ ╪Жа╓
-	   deleteItem //╠ш ╩Ха╕
+	   addItem //О©╫О©╫О©╫О©╫О©╫О©╫ О©╫ъ╟О©╫ ?? О©╫в╦О©╫О©╫О©╫ О©╫Н╤╩О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫П╦ё╟О©╫О©╫О©╫.
+	   getItem1 //О©╫О©╫О©╫О©╫О©╫О©╫ О©╫к╩О©╫ (О©╫з╣О©╫) ?? О©╫О©╫О©╫
+	   getItem2 //О©╫О©╫О©╫О©╫О©╫О©╫ О©╫к╩О©╫ (О©╫О©╫д║) 
+	   getItem3 //О©╫О©╫О©╫О©╫О©╫О©╫ О©╫к╩О©╫ (О©╫О©╫О©╫О©╫)
+	   getAllItem //О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫к╩О©╫
+	   updateItemPrice // О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ ?? sql О©╫О©╫О©╫
+	   updateItemLocation // О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫д║ О©╫О©╫О©╫О©╫
+	   deleteItem //О©╫О©╫ О©╫О©╫О©╫О©╫
 	    */
 
 	static ResourceBundle sql = DBUtil.getResourceBundle();

@@ -1,26 +1,17 @@
-package zigbo.model;
+package zigbo.service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import zigbo.exception.NotExistException;
-import zigbo.model.dto.ApplyDTO;
-import zigbo.model.dto.ApplyRequestDTO;
-import zigbo.model.dto.InterestDTO;
-import zigbo.model.dto.ItemDTO;
-import zigbo.model.dto.MemberDTO;
-import zigbo.model.dto.PaymentDTO;
-import zigbo.model.dto.RequestDTO;
-import zigbo.model.dto.RequestMemberDTO;
-import zigbo.model.dto.RequestPaymentDTO;
-import zigbo.model.dto.SellingDTO;
-import zigbo.model.dto.SellingMemberDTO;
+import zigbo.model.dao.*;
+import zigbo.model.dto.*;
 
 public class ZigboService {
 
    //// ITEM SERVICE ////
 	
-   // »õ·Î¿î item ÀúÀå
+   // ï¿½ï¿½ï¿½Î¿ï¿½ item ï¿½ï¿½ï¿½ï¿½
    public static boolean addItem(ItemDTO item) throws SQLException {
       return ItemDAO.addItem(item);
    }
@@ -30,71 +21,71 @@ public class ZigboService {
       return ItemDAO.getItem(itemCode);
    }
 
-   // ¸ðµç item °Ë»ö
+   // ï¿½ï¿½ï¿½ item ï¿½Ë»ï¿½
    public static ArrayList<ItemDTO> getAllItem() throws SQLException {
       return ItemDAO.getAllItem();
    }
 
-   // item »èÁ¦
+   // item ï¿½ï¿½ï¿½ï¿½
    public static boolean deleteItem(int itemCode) throws SQLException {
 	   return ItemDAO.deleteItem(itemCode);
    }
    
    //// INTEREST SERVICE ////
 
-   // »õ·Î¿î Âò
+   // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½
    public static boolean addInterest(InterestDTO interest) throws SQLException {
       return InterestDAO.addInterest(interest);
    }
 
-   // Æ¯Á¤ Selling±ÛÀÇ Âò°³¼ö ¹ÝÈ¯
+   // Æ¯ï¿½ï¿½ Sellingï¿½ï¿½ï¿½ï¿½ ï¿½ò°³¼ï¿½ ï¿½ï¿½È¯
    public static int getInterestOfSelling(int sellingCode) throws SQLException {
       return InterestDAO.getInterestOfSelling(sellingCode);
    }
 
-   // Âò »èÁ¦
+   // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
    public static boolean deleteInterest(int memberCode, int sellingCode) throws SQLException {
          return InterestDAO.deleteInterest(memberCode, sellingCode);
    }
    
    //// SELLING SERVICE ////
    
-   // »õ·Î¿î Selling Ãß°¡
+   // ï¿½ï¿½ï¿½Î¿ï¿½ Selling ï¿½ß°ï¿½
    public static boolean addSelling(SellingDTO selling) throws SQLException {
       return SellingDAO.addSelling(selling);
    }
    
-   // Æ¯Á¤ Selling ¹ÝÈ¯
+   // Æ¯ï¿½ï¿½ Selling ï¿½ï¿½È¯
    public static SellingDTO getSelling(int sellingCode) throws SQLException {
       return SellingDAO.getSelling(sellingCode);
    }
    
-   // ¸ðµç Selling °Ë»ö
+   // ï¿½ï¿½ï¿½ Selling ï¿½Ë»ï¿½
    public static ArrayList<SellingDTO> getAllSelling() throws SQLException {
       return SellingDAO.getAllSelling();
    }
    
-   //Á¶È¸¼ö Áõ°¡
+   //ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
    public static boolean updateSellingViews(int sellingCode) throws SQLException {      
       return SellingDAO.updateSellingViews(sellingCode);
    }
    
-   //ÁøÇà»óÅÂ ¾÷µ«
+   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
    public static boolean updateSellingProgress(int sellingCode) throws SQLException {      
       return SellingDAO.updateSellingProgress(sellingCode);
    }
    
-   //Á¶È¸¼ö ¸¹Àº ¼ø Sellings ¹ÝÈ¯
+   //ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Sellings ï¿½ï¿½È¯
    public static ArrayList<SellingDTO> getMostViews() throws SQLException {
       return SellingDAO.getMostViews();
    }
    
-   // ÃÖ½Å¼ø Sellings ¹ÝÈ¯
+   // ï¿½Ö½Å¼ï¿½ Sellings ï¿½ï¿½È¯
    public static ArrayList<SellingDTO> getMostRecent() throws SQLException {
       return SellingDAO.getMostRecent();
    }
    
-   // Âò¼ø Sellings ¹ÝÈ¯
+   // ï¿½ï¿½ï¿½ Sellings ï¿½ï¿½È¯
    public static ArrayList<SellingDTO> getMostInterest() throws SQLException {
       return SellingDAO.getMostInterest();
    }
@@ -105,17 +96,17 @@ public class ZigboService {
    
    ////PAYMENT SERVICE ////
    
-   // °áÁ¦ Ãß°¡
+   // ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
    public static boolean addPayment(PaymentDTO payment) throws SQLException {
       return PaymentDAO.addPayment(payment);
    }
    
-   // Æ¯Á¤ °áÁ¦ Å½»ö
+   // Æ¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å½ï¿½ï¿½
    public static PaymentDTO getPayment(int paymentCode) throws SQLException {
       return PaymentDAO.getPayment(paymentCode);
    }
    
-   // È¸¿øÀÇ °áÁ¦ Á¤º¸ º¸±â
+   // È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
    public static ArrayList<PaymentDTO> getPaymentofMember(int memberCode) throws SQLException {
       return PaymentDAO.getPaymentofMember(memberCode);
    }

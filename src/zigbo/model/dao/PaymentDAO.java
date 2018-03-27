@@ -1,4 +1,4 @@
-package zigbo.model;
+package zigbo.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,9 +14,9 @@ import zigbo.model.util.DBUtil;
 public class PaymentDAO {
 	static ResourceBundle sql = DBUtil.getResourceBundle();
 	/*
-	 * addPayment //°áÁ¦ ¿Ï·á½Ã
-	 * getAllPayment //¸¶ÀÌÆäÀÌÁö¿¡¼­ Æ¯Á¤ memberCodeÀÇ ¸ðµç °áÁ¦Á¤º¸ º¸±â
-	 * -- update, delete´Â ¾øÀ½ --
+	 * addPayment //ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ï¿½
+	 * getAllPayment //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Æ¯ï¿½ï¿½ memberCodeï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	 * -- update, deleteï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ --
 	 */
 	
 	public static boolean addPayment(PaymentDTO payment) throws SQLException{

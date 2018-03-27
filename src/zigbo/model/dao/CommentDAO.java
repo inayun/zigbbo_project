@@ -1,4 +1,4 @@
-package zigbo.model;
+package zigbo.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,11 +14,11 @@ public class CommentDAO {
 	static ResourceBundle sql = DBUtil.getResourceBundle();
 	
 	/*
-	 * addComment //ÆÇ¸Å³ª ¿äÃ»±Û¿¡ CommentÀÛ¼º½Ã
-	 * getComment //ÇÊ¿äÇÑ°¡?
-	 * getAllComment //Æ¯Á¤ ±ÛÀÇ ¸ðµç Comment °Ë»ö
-	 * updateComment //Comment¼öÁ¤ ½Ã: ±Û¸¸ ¼öÁ¤
-	 * deleteComment //»èÁ¦
+	 * addComment //ï¿½Ç¸Å³ï¿½ ï¿½ï¿½Ã»ï¿½Û¿ï¿½ Commentï¿½Û¼ï¿½ï¿½ï¿½
+	 * getComment //ï¿½Ê¿ï¿½ï¿½Ñ°ï¿½?
+	 * getAllComment //Æ¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Comment ï¿½Ë»ï¿½
+	 * updateComment //Commentï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½: ï¿½Û¸ï¿½ ï¿½ï¿½ï¿½ï¿½
+	 * deleteComment //ï¿½ï¿½ï¿½ï¿½
 	 */
 	
 	public static boolean addComment(CommentDTO comment) throws SQLException{

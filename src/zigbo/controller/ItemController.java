@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import zigbo.model.ZigboService;
+import zigbo.service.ZigboService;
 import zigbo.model.dto.InterestDTO;
 import zigbo.model.dto.ItemDTO;
 
@@ -50,10 +50,10 @@ public class ItemController extends HttpServlet {
 			boolean result = ZigboService.addItem(item);
 			if (result) {
 				request.setAttribute("item", item);
-				request.setAttribute("successMsg", "¾ÆÀÌÅÛ µî·Ï ¿Ï·á");
+				request.setAttribute("successMsg", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½");
 				//url = "activistDetail.jsp";
 			} else {
-				request.setAttribute("errorMsg", "´Ù½Ã ½ÃµµÇÏ¼¼¿ä");
+				request.setAttribute("errorMsg", "ï¿½Ù½ï¿½ ï¿½Ãµï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 			}
 		} catch(Exception s){
 			request.setAttribute("errorMsg", s.getMessage());
@@ -106,10 +106,10 @@ public class ItemController extends HttpServlet {
 			boolean result = ZigboService.addInterest(interest);
 			if(result){
 				request.setAttribute("interest", interest);
-				request.setAttribute("successMsg", "Âò µî·Ï ¿Ï·á");
+				request.setAttribute("successMsg", "ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½");
 				//url = "activistDetail.jsp";
 			}else{
-				request.setAttribute("errorMsg", "´Ù½Ã ½ÃµµÇÏ¼¼¿ä");
+				request.setAttribute("errorMsg", "ï¿½Ù½ï¿½ ï¿½Ãµï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 			}
 		}catch(Exception s){
 			request.setAttribute("errorMsg", s.getMessage());

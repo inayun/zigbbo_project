@@ -1,4 +1,4 @@
-package zigbo.model;
+package zigbo.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,11 +14,11 @@ public class MemberDAO {
 	static ResourceBundle sql = DBUtil.getResourceBundle();
 	
 	/*
-	 * addMember //È¸¿ø°¡ÀÔ ½Ã
-	 * getMember //code·Î È¸¿ø °Ë»ö
-	 * getAllMember //¸ðµç È¸¿ø °Ë»ö
-	 * updateMember //È¸¿ø Á¤º¸ ¼öÁ¤
-	 * deleteMember //È¸¿ø »èÁ¦
+	 * addMember //È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+	 * getMember //codeï¿½ï¿½ È¸ï¿½ï¿½ ï¿½Ë»ï¿½
+	 * getAllMember //ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½Ë»ï¿½
+	 * updateMember //È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	 * deleteMember //È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 */
 	

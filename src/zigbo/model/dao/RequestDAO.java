@@ -1,4 +1,4 @@
-package zigbo.model;
+package zigbo.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,9 +16,9 @@ public class RequestDAO {
 	/*
 	 * CRUD - Create(add/insert), - Read(one/all) - Update - Delete
 	 * 
-	 * addRequest //±¸¸Å±Û ÀÛ¼º½Ã getRequest //id·Î ±¸¸Å±Û °Ë»ö getAllRequest //¸ðµç ±¸¸Å±Û °Ë»ö
-	 * updateRequestViews //Á¶È¸¼ö Áõ°¡ updateRequestProgress //ÁøÇà»óÅÂ º¯°æ deleteRequest
-	 * //±Û »èÁ¦ getRequestofMember //È¸¿øÀÌ ¿Ã¸° Request±Û ºÒ·¯¿È
+	 * addRequest //ï¿½ï¿½ï¿½Å±ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½ getRequest //idï¿½ï¿½ ï¿½ï¿½ï¿½Å±ï¿½ ï¿½Ë»ï¿½ getAllRequest //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å±ï¿½ ï¿½Ë»ï¿½
+	 * updateRequestViews //ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ updateRequestProgress //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ deleteRequest
+	 * //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ getRequestofMember //È¸ï¿½ï¿½ï¿½ï¿½ ï¿½Ã¸ï¿½ Requestï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½
 	 */
 
 	static ResourceBundle sql = DBUtil.getResourceBundle();

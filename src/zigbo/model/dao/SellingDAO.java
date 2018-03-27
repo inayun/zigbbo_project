@@ -1,4 +1,4 @@
-package zigbo.model;
+package zigbo.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,16 +21,16 @@ public class SellingDAO {
 	 * 		- Update
 	 * 		- Delete
 	 * 
-	addSelling //ÆÇ¸Å±Û ÀÛ¼º½Ã
-	getSelling //id·Î ÆÇ¸Å±Û °Ë»ö
-	getAllSelling //¸ðµç ÆÇ¸Å±Û °Ë»ö
-	updateSellingViews //Á¶È¸¼ö Áõ°¡
-	updateSellingProgress //ÁøÇà»óÅÂ º¯°æ
-	deleteSelling //±Û »èÁ¦
+	addSelling //ï¿½Ç¸Å±ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½
+	getSelling //idï¿½ï¿½ ï¿½Ç¸Å±ï¿½ ï¿½Ë»ï¿½
+	getAllSelling //ï¿½ï¿½ï¿½ ï¿½Ç¸Å±ï¿½ ï¿½Ë»ï¿½
+	updateSellingViews //ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	updateSellingProgress //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	deleteSelling //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	
-	getMostViews //View ¸¹Àº°Å 6°³ ºÒ·¯¿À±â
-	getMostRecent //ÃÖ½Å¼ø 6°³ ºÒ·¯¿À±â
-	getMostInterest //Âò¸¹Àº°Å 6°³ ºÒ·¯¿À±â
+	getMostViews //View ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 6ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
+	getMostRecent //ï¿½Ö½Å¼ï¿½ 6ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
+	getMostInterest //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 6ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 	 */
 	

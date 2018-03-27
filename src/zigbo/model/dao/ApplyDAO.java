@@ -1,4 +1,4 @@
-package zigbo.model;
+package zigbo.model.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,11 +18,11 @@ public class ApplyDAO {
 	    *       - Update
 	    *       - Delete
 	    * 
-	   addApply //Áö¿ø±Û Ãß°¡
-	   getApply //Áö¿ø±Û °Ë»ö
-	   getAllApply //¸ðµç Áö¿ø±Û °Ë»ö
-	   updateApplyDetail //»ó¼¼¼³¸í º¯°æ
-	   deleteApply //±Û »èÁ¦
+	   addApply //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
+	   getApply //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
+	   getAllApply //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
+	   updateApplyDetail //ï¿½ó¼¼¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	   deleteApply //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	    */
 	
 	static ResourceBundle sql = DBUtil.getResourceBundle();

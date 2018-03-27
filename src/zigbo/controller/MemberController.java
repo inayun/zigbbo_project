@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import zigbo.model.ZigboService;
+import zigbo.service.*;
 import zigbo.model.dto.MemberDTO;
 
 public class MemberController extends HttpServlet {
@@ -49,7 +49,7 @@ public class MemberController extends HttpServlet {
 
 		try {
 			if(ZigboService.getCountByEmail(email)>0){
-				session.setAttribute("duplicateEmail", "ÀÌ¹Ì Á¸ÀçÇÏ´Â ÀÌ¸ÞÀÏÀÔ´Ï´Ù.");
+				session.setAttribute("duplicateEmail", "ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 				response.sendRedirect(url);
 				return;
 			}
@@ -65,17 +65,17 @@ public class MemberController extends HttpServlet {
 		if (email == null || email.trim().length() == 0 || password == null || password.trim().length() == 0
 				|| phone == null || phone.trim().length() == 0 || address == null || address.trim().length() == 0
 				|| account == null || account.trim().length() == 0) {
-			session.setAttribute("errInfo", "¸ðµç Á¤º¸¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			session.setAttribute("errInfo", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 			response.sendRedirect(url);
 			return;
 		}
 		MemberDTO member = new MemberDTO(email, password, phone, address, account);
 		try{
 			if(ZigboService.addMember(member)){
-				session.setAttribute("sucRegister", "°¡ÀÔ ¿Ï·á");
+				session.setAttribute("sucRegister", "ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½");
 				url = "index.jsp";
 			}else{
-				session.setAttribute("errRetry", "´Ù½Ã ½ÃµµÇÏ¼¼¿ä");
+				session.setAttribute("errRetry", "ï¿½Ù½ï¿½ ï¿½Ãµï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 			}
 		}catch(Exception s){
 			session.setAttribute("errorMsg", s.getMessage());
@@ -91,12 +91,12 @@ public class MemberController extends HttpServlet {
 			MemberDTO member = ZigboService.getMember(email, password);
 			if(member!=null){
 				request.setAttribute("getMember",member);
-				HttpSession session = request.getSession(); // ¼¼¼Ç »ý¼º
+				HttpSession session = request.getSession(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 				session.setAttribute("login", member.getMemberCode());
 				session.setAttribute("email", member.getEmail());
 				url = "index.jsp";
 			}else{
-				request.setAttribute("errorMsg", "Á¸ÀçÇÏÁö ¾Ê´Â È¸¿ø Á¤º¸ÀÔ´Ï´Ù.");
+				request.setAttribute("errorMsg", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 			}
 		}catch(Exception s){
 			request.setAttribute("errorMsg", s.getMessage());
